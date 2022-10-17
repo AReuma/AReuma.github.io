@@ -24,9 +24,9 @@ parent: Etc
 가장 예전 버전인 2.6.10을 다운받았을때, BUILD FAILED 라는 문구가 뜨면서 설치가 안됨. 
  
 에러 해결 검색해서 시도했지만 계속 에러가 발생. 
-- https://velog.io/@pushpull7381/m1-mac-BUILD-FAILED-macOS-12.0.1-using-ruby-build-20211227-%EC%98%A4%EB%A5%98-%EC%9E%A1%EA%B8%B0
+- [에러 해결 방법 1](https://velog.io/@pushpull7381/m1-mac-BUILD-FAILED-macOS-12.0.1-using-ruby-build-20211227-%EC%98%A4%EB%A5%98-%EC%9E%A1%EA%B8%B0)
   
-- https://stackoverflow.com/questions/48838498/failed-to-install-ruby-2-5-0-thru-rbenv-macos-high-sierra/48950894#48950894
+- [에러 해결 방법 2](https://stackoverflow.com/questions/48838498/failed-to-install-ruby-2-5-0-thru-rbenv-macos-high-sierra/48950894#48950894)
 
 이후, 가장 최근인 3.1.2 버전 설치했을때, 제대로 설치가됨.
 
