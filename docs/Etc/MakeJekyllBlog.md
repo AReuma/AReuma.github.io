@@ -6,17 +6,17 @@ parent: Etc
 
 # Jekyll을 이용해서 Github 블로그 생성하기 
   
-#### 1. rebenv 설치 
+## 1. rebenv 설치 
 ``` HTTP
  brew install rbenv ruby-build
 ```
   
-#### 2. ruby 버전 확인 
+## 2. ruby 버전 확인 
 ``` HTTP
  rbenv versions
 ```
   
-#### 3. 설치 가능한 버전 확인 
+## 3. 설치 가능한 버전 확인 
 ``` HTTP
  rbenv install -l
 ```
@@ -30,14 +30,14 @@ parent: Etc
 
 이후, 가장 최근인 3.1.2 버전 설치했을때, 제대로 설치가됨.
 
-#### 4. 루비 설치 
+## 4. 루비 설치 
 ``` HTTP
  rbenv install 3.1.2
 ```
 ``` HTTP
  rbenv global 3.1.2
 ```
-&nbsp;&nbsp; 1) 설치한 루비 버전 확인 
+#### 1) 설치한 루비 버전 확인 
 ``` HTTP
  rbenv versions
 ```
@@ -45,30 +45,35 @@ parent: Etc
     *버전만 나올 경우 다시 설치 
 
 
-#### 5. 터미널 설정 변경
-&nbsp;&nbsp; 1) 사용하는 SHELL 검색 
-![터미널확인](../../assets/images/Etc/MakeJekyllBlog/echoSHELL.png)
+## 5. 터미널 설정 변경  
+
+#### 1) 사용하는 SHELL 검색  
+
+![터미널확인](../../assets/images/Etc/MakeJekyllBlog/echoSHELL.png)  
+  
+
     * /bin/bash 를 사용하기 때무네 bash 파일 변경 
   
-&nbsp;&nbsp; 2) bash 파일 오픈
+#### 2) bash 파일 오픈
 ~~~
  vi ~/.bash_profile     
 ~~~
     
-&nbsp;&nbsp; 3) 맨 밑에 아래의 명령어 추가
-![터미널](../../assets/images/Etc/MakeJekyllBlog/bash.png)
+#### 3) 맨 밑에 아래의 명령어 추가  
+
+![터미널](../../assets/images/Etc/MakeJekyllBlog/bash.png)  
+
 ``` HTTP
- #rbenv
  export PATH={$Home}/.rbenv/bin:$PATH && \
  eval "$(rbenv init -)"
 ```
   
-&nbsp;&nbsp; 4) 변경된 파일 적용 
+#### 4) 변경된 파일 적용 
 ``` HTTP
  source ~/.bash_profile
 ```
 
-#### 6. Jekyll 다운로드 
+## 6. Jekyll 다운로드 
 ``` HTTP
  gem install bundler 
 ```
