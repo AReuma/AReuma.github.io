@@ -4,7 +4,7 @@ title: 3. 문장 속 단어
 parent: InflearnAlgorithm
 ---
 
-# 문자 자르기
+# 문자열 자르기
   
 
 ## 1. subString 
