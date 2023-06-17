@@ -10,14 +10,20 @@ parent: InflearnAlgorithm
 ## 1. toUpperCase 
   
 ``` java
-string.toUpperCase(); 
-```  
+String str = abCDef;
+str = str.toUpperCase();
+
+system.out.print(str);  //ABCDEF
+```
 
   문자열을 대문자로 변환해서 반환
   
 ## 2. toLowerCase
 ``` java
-string.toLowerCase();
+String str = abcDEf;
+str = str.toLowerCase();
+
+system.out.print(str);  //abcdef 
 ```
   
 문자열을 소문자로 변환해서 반환
