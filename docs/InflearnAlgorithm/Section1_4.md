@@ -49,7 +49,8 @@ System.out.println(sb.toString()); //abcdef
   
   
 
-* ### **equals() 문자열 비교**
+* ### **equals() 문자열 비교**  
+
 ``` java
 StringBuilder sb = new StringBuilder("Happy");
 sb.append("Day");
