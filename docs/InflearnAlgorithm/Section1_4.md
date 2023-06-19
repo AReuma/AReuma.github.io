@@ -49,7 +49,7 @@ System.out.println(sb.toString()); //abcdef
   
   
 
-* ### **equals() 문자열 비교**  
+### **1) equals() 문자열 비교**  
 
 ``` java
 StringBuilder sb = new StringBuilder("Happy");
@@ -64,7 +64,7 @@ StringBuilder랑 String이랑 비교를 했기 때문.
 그래서 비교를 원할때는 StringBuilder로 만든 문자열을 String으로 변환해야함. 
 
 
-* ### **insert(인덱스, 값) 특정 인덱스에 값을 삽입**
+### **2) insert(인덱스, 값) 특정 인덱스에 값을 삽입**
 ``` java
 StringBuilder sb = new StringBuilder("Happy");
 sb.insert(1,"Day");
@@ -73,7 +73,7 @@ System.out.println(sb); //HDayappy
 ```  
 
 
-* ### **delete(시작 인덱스, 마지막 인덱스) 시작 인덱스부터 마지막 인덱스-1까지 깂을 삭제**
+### **3) delete(시작 인덱스, 마지막 인덱스) 시작 인덱스부터 마지막 인덱스-1까지 깂을 삭제**
 ``` java
 StringBuilder sb = new StringBuilder("HappyDay");
 sb.delete(1,5);
@@ -82,7 +82,7 @@ System.out.println(sb); //HDay
 ```  
 
 
-* ### **indexOf(특정문자) 특정 문자의 인덱스 출력**
+### **i4) ndexOf(특정문자) 특정 문자의 인덱스 출력**
 ``` java
 StringBuilder sb = new StringBuilder("HappyDay");
 
@@ -90,7 +90,7 @@ System.out.println(sb.indexOf("H"));    //0
 ```  
 
 
-* ### **subString(시작 인덱스, 마지막 인덱스) 시작 인덱스부터 마지막인덱스까지 값 자르기**
+### **5) subString(시작 인덱스, 마지막 인덱스) 시작 인덱스부터 마지막인덱스까지 값 자르기**
 ``` java
 StringBuilder sb = new StringBuilder("HappyDay");
 
@@ -99,7 +99,7 @@ System.out.println(sb.substring(0,5));  //Happy
 ```  
 
 
-* ### **length() 문자열 길이**
+### **6) length() 문자열 길이**
 ``` java
 StringBuilder sb = new StringBuilder("HappyDay");
   
@@ -107,14 +107,14 @@ System.out.println(sb.length());    //8
 ```  
 
 
-* ### **replace(시작 인덱스, 마지막 인덱스, 값) 시작 인덱스부터 마지막 인덱스-1까지의 값과 변경**
+### **7) replace(시작 인덱스, 마지막 인덱스, 값) 시작 인덱스부터 마지막 인덱스-1까지의 값과 변경**
 ``` java
 StringBuilder sb = new StringBuilder("HappyDay");
 System.out.println(sb.replace(0, 5, "Reuma"));
 ```  
 
 
-* ### **reverse() 글자 순서 뒤집기**
+### **8) reverse() 글자 순서 뒤집기**
 ``` java
 StringBuilder sb = new StringBuilder("HappyDay");
 
