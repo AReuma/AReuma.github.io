@@ -9,7 +9,7 @@ parent: InflearnAlgorithm
 
 ## 1. Character 클래스 
   
-  ### 문자 데이터에 대한 다양한 처리를 위한 상수 및 메서드를 제공 
+### 문자 데이터에 대한 다양한 처리를 위한 상수 및 메서드를 제공 
   
 
 ## 2. Character.isLowerCase()
