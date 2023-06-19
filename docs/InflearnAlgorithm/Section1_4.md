@@ -32,10 +32,10 @@ sb.append("def");
 System.out.println(sb.toString()); // str3보다 str4랑 같은게 아닌가..?
 ```  
 
-https://developer-talk.tistory.com/774
-  
+[참고 블로그](https://developer-talk.tistory.com/774)
+ 
 동작 과정에서의 차이점이 있다고 한다.  
-이 블로그에 잘 정리 되어있음.  
+위 블로그에 그림과 함께 잘 정리 되어있음.  
   
 ## 2. StringBuilder 클래스 사용법
 
@@ -82,7 +82,7 @@ System.out.println(sb); //HDay
 ```  
 
 
-### **i4) ndexOf(특정문자) 특정 문자의 인덱스 출력**
+### **4) ndexOf(특정문자) 특정 문자의 인덱스 출력**
 ``` java
 StringBuilder sb = new StringBuilder("HappyDay");
 
