@@ -61,7 +61,8 @@ string.indexOf("특정문자",beginIndex);
   System.out.println(str.indexOf("l")): //2
   System.out.println(str.indexOf("l", 5); //13
   System.out.println(str.indexOf("t"); //-1
-  ```
+  ```  
+* 중복으로 문자가 사용되었는지 여부를 판단할 수 있다.
 
 ## 3. lastIndexOf()
 ``` java
