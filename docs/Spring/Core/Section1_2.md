@@ -7,7 +7,7 @@ parent: Spring
 # 좋은 객체 지향 설계의 5가지 원칙(SOLID)
   
 
-## 1. SOLID
+## SOLID
   
 ![SOLID.png](/assets/images/Spring/core/Section2_1.png)
   
