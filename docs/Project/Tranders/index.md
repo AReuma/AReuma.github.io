@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: minimal
 title: Tranders
 has_children: true
 permalink: /docs/Project/Tranders
