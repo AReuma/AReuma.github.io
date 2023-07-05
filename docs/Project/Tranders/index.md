@@ -1,5 +1,5 @@
 ---
-layout: minimal
+layout: default
 title: Tranders
 parent: Project
 has_children: true
