@@ -40,14 +40,14 @@ MemberService와 OrderService를 인터페이스로 구현해 다형성, 역활�
   
 구현 객체를 생성하고, 연결하는 책임을 가지는 별도의 설정 클래스 생성
 -> AppConfig
-![img3.png](..%2F..%2F..%2Fassets%2Fimages%2FSpring%2Fcore%2FSection2%2Fimg3.png)
+![img3.png](../../../assets/images/Spring/core/Section2/img3.png)
 
 AppConfig가 아래 두개의 구현 객체를 생성.  
   * MemberServiceImpl
   * MemoryMemberRepository 
-  
-![img4.png](..%2F..%2F..%2Fassets%2Fimages%2FSpring%2Fcore%2FSection2%2Fimg4.png)
-  
+
+![img4.png](../../../assets/images/Spring/core/Section2/img4.png)  
+
 MemberServiceImpl에 MemoryMemberRepoitory를 생성자를 통해 주입함.  
   
 MemberServiceImpl은 이제 MemberRepository 인터페이스에만 의존.  
