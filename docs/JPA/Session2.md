@@ -4,7 +4,7 @@ title: 영속성 관리
 parent: JPA
 ---
 
-# 영속성 관리
+# 영속성 관리/ 엔티티 생명주기/ 영속성 컨텍스트의 이점
   
 
 ## 1. 영속성 컨텍스트 
@@ -118,7 +118,7 @@ em.persist(memberB);
 transaction.commit(); // 커밋하는 순간 쌓여 있던 INSERT SQL을 DB에 보냄 
 ```   
   
-![JPA_entityManager.jpeg](..%2F..%2Fassets%2Fimages%2FJPA%2FSection2%2FJPA_entityManager.jpeg)
+![JPA_entityManager.jpeg](/assets/images/JPA/Section2/JPA_entityManager.jpeg)
   
 ### 4) 변경 감지 
 
