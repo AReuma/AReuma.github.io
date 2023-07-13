@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 앤티티 매핑
+title: 엔티티 매핑
 parent: JPA
 ---
 
-# 앤티티 매핑
+# 엔티티 매핑
   
   
   
@@ -95,6 +95,8 @@ JPA 실행 로직에는 영향을 주지 않고, DDL을 자동 생성할때만 �
 | @Enumerated | enum 타입 매핑                                      |
 | @Lob        | BLOB, CLOB 매핑                                   |
 | @Transient  | 특정 필드를 컬럼에 매핑하지 않음 (DB와 관계 없이 사용할때, 메모리에서만 사용함) |
+    
+  
 
 #### @Column
 
@@ -109,6 +111,7 @@ JPA 실행 로직에는 영향을 주지 않고, DDL을 자동 생성할때만 �
 | length(DDL)           | 문자 길이 제약조건                                                      | 255                   |
 | precision, scale(DDL) | BigDecimal 타입에서 사용함. precision은 소수잠을 초함한 전체 자리수, scale은 소수의 자릿수 | precision=5, scale=2  |
     
+  
 
 #### @Enumerate
 
@@ -125,8 +128,8 @@ private RoleType roleType;
   
 기본값은 EnumType.ORDINAL  
 EnumType.ORDINAL은 enum의 값을 추가할때 중복이 발생할 수 있기때문에 사용하지 않는게 좋음.  
-
-
+    
+  
 
 #### @Temporal
 
@@ -141,8 +144,8 @@ private Date createdDate;
 private LocalDate testLocalDate;
 private LocalDateTime testLocalDateTime;
 ``` 
-
-
+    
+  
 
 #### @Lob
 
@@ -153,8 +156,8 @@ private LocalDateTime testLocalDateTime;
 @Lob
 private String description;
 ``` 
-
-
+    
+  
 
 #### @Transient
 
@@ -167,4 +170,58 @@ private String description;
 private Integer temp;
 ``` 
 
+
+## 4. 기본 키 매핑
+  
+  
+* @Id
+* @GeneratedValue 
+  
+```java
+@Id @GeneratedValue(strategy = GenerationType.AUTO)
+private Long id; 
+```
+    
+
+### 1) @Id
+
+* 직접 할당 
+    
+
+### 2) @GeneratedValue
+  
+* 자동 생성
+    
+#### IDENTIY  
+데이터베이스에 위임, MYSQL  
+나는 모르겠고 DB야 알아서 값을 정해줘  
+  
+DB에 들어가야 pk를 알 수 있다.  
+commit하기 전 ID 값을 알 수 없음. 
+<span style="color: red">em.persist()시점에 즉시 INSERT SQL 실행하고 DB에서 식별자 조회 </span>
+
+#### SEQUENCE
+데이터베이스 시퀀스 오브젝트 사용, ORACLE  
+  
+* 버퍼링 가능  
+* 시퀀스를 미리 확보해서 계속 호출하지 않음.
+
+멤버를 생성 후 ID 값을 알 수 없음.  
+DB에서 시퀀스를 알아야함.  
+em.perisit(member)할때 DB에서 시퀀스 값 n ~ n+50을 메모리에 저장.  
+그 후 DB에 INSERT SQL을 날리지 않아도 ID값을 검색할 수 있음.  
+
+#### TABLE
+키 생성용 테이블 사용, 모든 DB  
+성능 저하가 일어남.  
+
+#### AUTO
+방언에 따라 자동 지정, 기본값
+
+
+
+### 권장하는 식별자 전략 
+
+* 긴본 키 제약 조건: null 아님, 유일, 변하면 안됨.  
+* 권장: Long형 + 대체키 + 키 생성전략 사용  
 
