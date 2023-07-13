@@ -197,7 +197,7 @@ private Long id;
 나는 모르겠고 DB야 알아서 값을 정해줘  
   
 DB에 들어가야 pk를 알 수 있다.  
-commit하기 전 ID 값을 알 수 없음. 
+commit하기 전 ID 값을 알 수 없음.  
 <span style="color: red">em.persist()시점에 즉시 INSERT SQL 실행하고 DB에서 식별자 조회 </span>
 
 #### SEQUENCE
