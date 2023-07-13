@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 7. 회문문자열
+title: 회문문자열
 parent: InflearnAlgorithm
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 4. 단어 뒤집기(StringBuilder 이용법 또는 직접 뒤집기)
+title: 단어 뒤집기(StringBuilder 이용법 또는 직접 뒤집기)
 parent: InflearnAlgorithm
 ---
 # 단어 뒤집기

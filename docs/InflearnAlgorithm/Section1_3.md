@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 3. 문장 속 단어
+title: 문장 속 단어
 parent: InflearnAlgorithm
 ---
 

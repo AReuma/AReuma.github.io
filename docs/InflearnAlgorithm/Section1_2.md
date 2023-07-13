@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 2. 대소문자 변환
+title: 대소문자 변환
 parent: InflearnAlgorithm
 ---
 

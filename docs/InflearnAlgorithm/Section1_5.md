@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5. 특정 문자 뒤집기
+title: 특정 문자 뒤집기
 parent: InflearnAlgorithm
 ---
 

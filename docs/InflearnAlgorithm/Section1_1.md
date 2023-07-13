@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 1. 문자 찾기 
+title: 문자 찾기 
 parent: InflearnAlgorithm
 ---
 

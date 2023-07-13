@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 9. 숫자만 추출
+title: 숫자만 추출
 parent: InflearnAlgorithm
 ---
 
