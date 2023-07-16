@@ -1,6 +1,6 @@
 ---
 layout: default
-title: JAVA Executing an update/delete query 에러 해결
+title: JPA Executing an update/delete query 에러 해결
 parent: Issue
 ---
     
