@@ -7,7 +7,7 @@ parent: Issue
 # [JAVA] Map안에 map 찾기 (OAuth2 Naver Login 오류 발생)
 
 
-## Reason 
+## <span style="background-color:skyblue; color: white">Reason</span> 
 ![error.png](/assets/images/Issue/Issue2/error.png)
     
 네이버는 다른 로그인 api와는 다르게 담겨서 넘어온다.  
@@ -16,7 +16,7 @@ parent: Issue
 ![img.png](/assets/images/Issue/Issue2/img.png)
          
 
-## Solution 
+## <span style="background-color:pink; color: white"> Solution 
 ### 변경 전 
 ![before.png](/assets/images/Issue/Issue2/before.png)
       
