@@ -9,4 +9,17 @@ has_children: true
 
 ![로고](/assets/images/Project/Bossi/Bossi_logo.png)
 
+## 누가 쉽게 사장님이 되어서 물건을 팔 수 있는 쇼핑몰 플랫폼
+
+### 벤치마킹: 당근 마켓
+### 구현 기간:  2023. 7. 1 ~ 진행중
+
+          
+
+### 기술스택 :
+* java
+* javascript
+* springboot
+* jpa
+* vue.jså
  
