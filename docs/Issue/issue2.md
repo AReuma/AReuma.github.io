@@ -1,6 +1,6 @@
 ---
 layout: default
-title: [JAVA] Map안에 map 찾기 (OAuth2 Naver Login 오류 발생)
+title: JAVA Map안에 map 찾기 (OAuth2 Naver Login 오류 발생)
 parent: Issue
 ---
 
