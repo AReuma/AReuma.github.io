@@ -1,7 +1,7 @@
 ---
 layout: default
 title: [JPA] Executing an update/delete query 에러 해결
-parent: Issue
+parent: 이슈관리
 ---
     
 # [JPA] Executing an update/delete query 에러 해결  
