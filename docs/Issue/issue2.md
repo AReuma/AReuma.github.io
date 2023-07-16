@@ -1,28 +1,27 @@
 ---
 layout: default
 title: [JAVA] Map안에 map 찾기 (OAuth2 Naver Login 오류 발생)
-parent: 이슈관리
-grand_parent: Project
+parent: Issue
 ---
 
 # [JAVA] Map안에 map 찾기 (OAuth2 Naver Login 오류 발생)
 
 
 ## Reason 
-![error.png](/assets/images/Project/Issue/Issue2/error.png)
+![error.png](/assets/images/Issue/Issue2/error.png)
     
 네이버는 다른 로그인 api와는 다르게 담겨서 넘어온다.  
 카카오, 구글, 깃허브는 Map 하나에 담겨온다면, 네이버는 Map안에 map이 있는 형태로 넘어온다.  
       
-![img.png](/assets/images/Project/Issue/Issue2/img.png)
+![img.png](/assets/images/Issue/Issue2/img.png)
          
 
 ## Solution 
 ### 변경 전 
-![before.png](/assets/images/Project/Issue/Issue2/before.png)
+![before.png](/assets/images/Issue/Issue2/before.png)
       
 ### 변경 후 
-![after.png](/assets/images/Project/Issue/Issue2/after.png)
+![after.png](/assets/images/Issue/Issue2/after.png)
       
       
   
