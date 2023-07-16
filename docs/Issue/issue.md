@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 이슈관리
-grand_parent: Project
+parent: Issue
+
 ---
 
 # 이슈관리
