@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 이슈관리
+title: 이슈관리1
 parent: Issue
 
 ---
