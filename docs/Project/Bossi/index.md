@@ -21,5 +21,5 @@ has_children: true
 * javascript
 * springboot
 * jpa
-* vue.jså
+* vue.js
  
