@@ -1,6 +1,7 @@
 ---
 layout: default
-title: 이슈관리
+title: [JAVA] Map안에 map 찾기 (OAuth2 Naver Login 오류 발생)
+parent: 이슈관리
 grand_parent: Project
 ---
 
