@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 백준
+title: Baekjoon
 has_children: true
 permalink: /docs/Baekjoon
 ---
