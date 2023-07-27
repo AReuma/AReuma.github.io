@@ -35,7 +35,7 @@ permalink: /
 
 <p><h1 align="center"> 🌟 Contacts 🌟 </h1></p>
 <p align="center">
-<a href="https://meur.tistory.com/"><img src="https://img.shields.io/badge/Tistory-000000?style=flat-square&amp;logo=Tistory&amp;logoColor=white" alt="Tistory"></a>  <a href="https://twitter.com/muer_i"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=flat-square&amp;logo=Twitter&amp;logoColor=white" alt="Twitter"></a> <a href="mailto:kuuniin@gmail.com"><img src="https://img.shields.io/badge/Gmail-d14836?style=flat-square&amp;logo=Gmail&amp;logoColor=white&amp;link=mailto:kuuniin@gmail.com" alt="Gmail Badge"></a>
+<a href="mailto:kuuniin@gmail.com"><img src="https://img.shields.io/badge/Gmail-d14836?style=flat-square&amp;logo=Gmail&amp;logoColor=white&amp;link=mailto:kuuniin@gmail.com" alt="Gmail Badge"></a>
 </p>
 
 <br/>
