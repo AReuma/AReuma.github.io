@@ -100,7 +100,8 @@ implementation 'org.springframework.boot:spring-boot-starter-validation'
 [참고 사이트](https://stackoverflow.com/questions/36329001/unable-to-create-a-configuration-because-no-bean-validation-provider-could-be-f)  
 
 
-<details>
+<details>  
+
 <summary>에러 코드</summary> 
   
 
@@ -153,8 +154,10 @@ implementation group: 'io.swagger.core.v3', name: 'swagger-core', version: '2.2.
     
 [참고 사이트](https://stackoverflow.com/questions/75732794/spring-boot-3-and-swagger-ui-java-lang-nosuchmethoderror-io-swagger-v3-oas-ann)
 
-<details>
+<details>  
+
 <summary>에러 코드</summary>   
+  
 
 > java.lang.NoSuchMethodError: 'boolean io.swagger.v3.oas.models.media.Schema.getExampleSetFlag()'
 > at io.swagger.v3.core.jackson.SchemaSerializer.serialize(SchemaSerializer.java:35) ~[swagger-core-jakarta-2.2.7.jar:2.2.7]
