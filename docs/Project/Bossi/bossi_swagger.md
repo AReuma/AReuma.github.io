@@ -64,19 +64,19 @@ Spring boot 버전에 따라서 Swagger 버전을 변경.
     
 
 ### Swagger 3.0.0
-
-#### * swagger 3.0.0 시도  
+    
+* swagger 3.0.0 시도  
 ```java
 implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '3.0.0'
 implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'
 ```
   
   
-#### * 에러 발생 -1   
+* 에러 발생 -1   
 ![whitelabelErrorPage.png](/assets/images/Project/Bossi/swagger/whitelabelErrorPage.png)
+      
 
-
-#### * 해결 
+* 해결 
 > Spring boot 3.x.x 부터는 Springfox 대신 Springdoc를 사용해야함. 
 
 ```java
@@ -88,11 +88,11 @@ implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
 [참고 사이트](https://velog.io/@layl__a/Spring-Boot-3.x-%EB%B2%84%EC%A0%84-%EC%9D%B4%ED%9B%84%EC%97%90%EC%84%9C-Swagger-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94)  
 
 
-#### * 에러 발생 -2  
+* 에러 발생 -2  
   
 ![swagger-validation.png](/assets/images/Project/Bossi/swagger/swagger-validation.png)
 
-#### * 해결 
+* 해결 
 
 ```java
 implementation 'org.springframework.boot:spring-boot-starter-validation'
@@ -103,7 +103,8 @@ implementation 'org.springframework.boot:spring-boot-starter-validation'
 <details>  
 
 <summary>에러 코드</summary> 
-  
+
+<div markdown="1">
 
 jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
 at jakarta.validation.Validation$GenericBootstrapImpl.configure(Validation.java:291) ~[jakarta.validation-api-3.0.2.jar:na]
@@ -113,7 +114,7 @@ at org.hibernate.cfg.beanvalidation.TypeSafeActivator.activate(TypeSafeActivator
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
 at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
 at org.hibernate.cfg.beanvalidation.BeanValidationIntegrator.integrate(BeanValidationIntegrator.java:137) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
-at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:287) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
+at org.hibernate.internal.SessionFactoryImpl.<div>(SessionFactoryImpl.java:287) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
 at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:415) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
 at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1423) ~[hibernate-core-6.1.7.Final.jar:6.1.7.Final]
 at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.6.jar:6.0.6]
@@ -139,16 +140,16 @@ at org.springframework.boot.SpringApplication.run(SpringApplication.java:310) ~[
 at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304) ~[spring-boot-3.0.4.jar:3.0.4]
 at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293) ~[spring-boot-3.0.4.jar:3.0.4]
 at com.example.bossi.BossiApplication.main(BossiApplication.java:11) ~[main/:na]
-  
+</div>
 </details>   
+  
 
-
-#### * 에러 발생 -3  
+* 에러 발생 -3  
     
 ![swagger-error500.png](/assets/images/Project/Bossi/swagger/swagger-error500.png)
 
-
-#### * 해결
+  
+* 해결
 의존성 추가
 ```java
 implementation group: 'io.swagger.core.v3', name: 'swagger-core', version: '2.2.8'
@@ -159,8 +160,8 @@ implementation group: 'io.swagger.core.v3', name: 'swagger-core', version: '2.2.
 <details>  
 
 <summary>에러 코드</summary>   
-  
 
+<div markdown="1">
 java.lang.NoSuchMethodError: 'boolean io.swagger.v3.oas.models.media.Schema.getExampleSetFlag()'
 at io.swagger.v3.core.jackson.SchemaSerializer.serialize(SchemaSerializer.java:35) ~[swagger-core-jakarta-2.2.7.jar:2.2.7]
 at io.swagger.v3.core.jackson.SchemaSerializer.serialize(SchemaSerializer.java:13) ~[swagger-core-jakarta-2.2.7.jar:2.2.7]
@@ -312,6 +313,7 @@ at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecut
 at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.5.jar:10.1.5]
 at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
   
+</div>
 </details>  
     
     
@@ -349,16 +351,14 @@ public class SwaggerConfig {
 
 ![swagger-ui.png](/assets/images/Project/Bossi/swagger/swagger-ui-error.png)
 
-#### * 에러 발생 
+* 에러 발생 
 ApiInfoVuilder()를 통해 API에 대한 정보를 설정 시도함.  
 Swagger 상단의 제목, 버전, 설명을 추가했으나 접속했을때 보이지않는 에러가 발생함. 
-
-#### * 에러 해결 
+    
+* 에러 해결 
 OpenAPI been 등록해서 제목, 버전, 설명을 추가함. 
     
-![swagger-ui.png](/assets/images/Project/Bossi/swagger/swagger-ui.png)    
-    
-
+![swagger-ui.png](/assets/images/Project/Bossi/swagger/swagger-ui.png)
 ```java
 @Configuration
 public class SwaggerConfig {
