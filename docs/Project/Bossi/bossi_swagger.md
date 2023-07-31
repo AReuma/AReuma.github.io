@@ -42,7 +42,10 @@ spring:
 ![swagger-2.9.2.png](/assets/images/Project/Bossi/swagger/swagger-2.9.2.png)
      
 ![swagger-ui-2.9.2.png](/assets/images/Project/Bossi/swagger/swagger-ui-2.9.2.png)
-  
+      
+    
+    
+
 ```java
 implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.4'
 implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '2.9.4'
@@ -52,7 +55,10 @@ implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '
 
 ![swagger-error-2.9.2.png](/assets/images/Project/Bossi/swagger/swagger-error-2.9.2.png)
     
-* 해결 
+* 해결  
+Spring boot 버전에 따라서 Swagger 버전을 변경. 
+    
+
 > Spring boot 2.6버전 하위 - Swagger 2.x.x  
 > Spring boot 2.6버전 상위 - Swagger 3.x.x  
     
@@ -79,8 +85,7 @@ implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '
 implementation group: 'io.springfox', name: 'springfox-boot-starter', version: '3.0.0'  
 implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.2'
 ``` 
-참고 사이트  
-https://velog.io/@layl__a/Spring-Boot-3.x-%EB%B2%84%EC%A0%84-%EC%9D%B4%ED%9B%84%EC%97%90%EC%84%9C-Swagger-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94
+[참고 사이트](https://velog.io/@layl__a/Spring-Boot-3.x-%EB%B2%84%EC%A0%84-%EC%9D%B4%ED%9B%84%EC%97%90%EC%84%9C-Swagger-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94)  
 
 
 * 에러 발생 -2  
@@ -92,8 +97,7 @@ https://velog.io/@layl__a/Spring-Boot-3.x-%EB%B2%84%EC%A0%84-%EC%9D%B4%ED%9B%84%
 ```java
 implementation 'org.springframework.boot:spring-boot-starter-validation'
 ```   
-참고 사이트
-https://stackoverflow.com/questions/36329001/unable-to-create-a-configuration-because-no-bean-validation-provider-could-be-f  
+[참고 사이트](https://stackoverflow.com/questions/36329001/unable-to-create-a-configuration-because-no-bean-validation-provider-could-be-f)  
 
 
 <details>
@@ -145,9 +149,7 @@ https://stackoverflow.com/questions/36329001/unable-to-create-a-configuration-be
 implementation group: 'io.swagger.core.v3', name: 'swagger-core', version: '2.2.8'
 ```
     
-참고 사이트  
-
-https://stackoverflow.com/questions/75732794/spring-boot-3-and-swagger-ui-java-lang-nosuchmethoderror-io-swagger-v3-oas-ann
+[참고 사이트](https://stackoverflow.com/questions/75732794/spring-boot-3-and-swagger-ui-java-lang-nosuchmethoderror-io-swagger-v3-oas-ann)
 
 <details>
 <summary>에러 코드</summary>   
