@@ -15,9 +15,9 @@ parent: Markdown
     
     
 
-![details-errorCode.png](..%2F..%2Fassets%2Fimages%2FMarkdown%2Fdetails%2Fdetails-errorCode.png)    
+![details-errorCode.png](/assets/images/Markdown/details/details-errorCode.png)    
     
-![details-error.png](..%2F..%2Fassets%2Fimages%2FMarkdown%2Fdetails%2Fdetails-error.png)    
+![details-error.png](/assets/images/Markdown/details/details-error.png)    
     
 
 ## <span style="background-color:pink; color: white"> Solution </span>
