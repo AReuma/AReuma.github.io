@@ -23,6 +23,8 @@ parent: Markdown
 ## <span style="background-color:pink; color: white"> Solution </span>
 
     
+> div markdown=”1” 은 jekyll에서 html사이에 markdown을 인식 하기 위해 작성한 태그 
+
 ```html
 <details>
     <summary>제목</summary>
@@ -49,4 +51,6 @@ parent: Markdown
     
 
 
-![details.png](..%2F..%2Fassets%2Fimages%2FMarkdown%2Fdetails%2Fdetails.png)
+![details.png](..%2F..%2Fassets%2Fimages%2FMarkdown%2Fdetails%2Fdetails.png)    
+    
+[참고 블로그](https://inasie.github.io/it%EC%9D%BC%EB%B0%98/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4-expander-control/)
