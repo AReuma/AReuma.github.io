@@ -142,6 +142,8 @@ at com.example.bossi.BossiApplication.main(BossiApplication.java:11) ~[main/:na]
   
 </details>   
   
+    
+
 * 에러 발생 -3  
     
 ![swagger-error500.png](/assets/images/Project/Bossi/swagger/swagger-error500.png)
