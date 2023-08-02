@@ -18,13 +18,13 @@ User Entity에 @NotBlank 어노테이션 사용으로 인한 오류 발생.
 
 | 어노테이션                                       | 거부            | 허용     |
 |---------------------------------------------|---------------|--------|
-| <span style="color:yellow">@NotNull</span>  | Null          | "", " " |
-| <span style="color:yellow">@NotEmpty</span> | Null, ""      | " "    |
-| <span style="color:yellow">@NotBlank</span> | Null, "", " " |        |
+| <span style="color:orange">@NotNull</span>  | Null          | "", " " |
+| <span style="color:orange">@NotEmpty</span> | Null, ""      | " "    |
+| <span style="color:orange">@NotBlank</span> | Null, "", " " |        |
 
-<span style="color:yellow">@NotBlank</span>는 <span style="color:red">Null, "", " "</span> 값이 허용되지 않는 어노테이션인데 Enum타입에서는 공백과 null 값이 올 수 없기때문에 에러가 발생함.   
+<span style="color:orange">@NotBlank</span>는 <span style="color:red">Null, "", " "</span> 값이 허용되지 않는 어노테이션인데 Enum타입에서는 공백과 null 값이 올 수 없기때문에 에러가 발생함.   
 
-<span style="color:yellow">@NotBlank</span> 대신 <span style="color:yellow">@NotNull</span>을 사용하면 에러 해결한다. 
+<span style="color:orange">@NotBlank</span> 대신 <span style="color:orange">@NotNull</span>을 사용하면 에러 해결한다. 
     
 
 ![after.png](/assets/images/Issue/Issue3/after.png)
