@@ -4,7 +4,7 @@ title: NotBlank 어노테이션 잘못 사용으로 인한 에러
 parent: Issue
 ---
 
-# 이슈관리
+# @NotBlank 어노테이션 잘못 사용으로 인한 에러
 
 ## <span style="background-color:skyblue; color: white">Reason</span>
 회원가입을 진행할때 발생하는 에러문구 
