@@ -1,6 +1,6 @@
 ---
 layout: default
-title: @NotBlank 어노테이션 잘못 사용으로 인한 에러 
+title: NotBlank 어노테이션 잘못 사용으로 인한 에러 
 parent: Issue
 ---
 
