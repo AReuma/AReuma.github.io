@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Setter 사용 지양/ Builder 패턴  
+title: Setter 사용 지양과 Builder 패턴  
 parent: Bossi
 grand_parent: Project
 ---
