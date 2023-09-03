@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 23.09.03 TIL
-parent: Spring
+parent: TIL
 ---
 
 # 23.09.03 TIL
@@ -13,15 +13,15 @@ parent: Spring
 >⌛ 공부시간 : 9:30 ~
     
   
-![agile_0903.png](..%2F..%2F..%2Fassets%2Fimages%2FTIL%2Fproject%2Fagile_0903.png)    
+![agile_0903.png](/assets/images/TIL/project/agile_0903.png)    
     
 
 ## 1. 메인 페이지 [MP] 
   
     
-![categoryMouseover.png](..%2F..%2F..%2Fassets%2Fimages%2FTIL%2Fproject%2FcategoryMouseover.png)    
+![categoryMouseover.png](/assets/images/TIL/project/categoryMouseover.png)    
     
-![nameMouseover.png](..%2F..%2F..%2Fassets%2Fimages%2FTIL%2Fproject%2FnameMouseover.png)    
+![nameMouseover.png](/assets/images/TIL/project/nameMouseover.png)    
     
 ```vue
 <div class="after_login_button" @mouseover="mouseover" @mouseleave="hideList">
@@ -113,9 +113,9 @@ methods: {
 
 ## 2. 입점 페이지 [EP]
   
-![enteringStore.png](..%2F..%2F..%2Fassets%2Fimages%2FTIL%2Fproject%2FenteringStore.png)
+![enteringStore.png](/assets/images/TIL/project/enteringStore.png)
      
-![enteringStoreForms.png](..%2F..%2F..%2Fassets%2Fimages%2FTIL%2Fproject%2FenteringStoreForms.png)    
+![enteringStoreForms.png](/assets/images/TIL/project/enteringStoreForms.png)    
     
 
 아래 화살표를 클릭하면 스크롤이 내려 고객의 정보를 작성해서 요청하는 폼이 나오도록 구현.  
@@ -148,7 +148,7 @@ methods: {
 
 ## 2. 관리자 페이지 [MAP],[SELLMS]
     
-![managerPageMemo.png](..%2F..%2F..%2Fassets%2Fimages%2FTIL%2Fproject%2FmanagerPageMemo.png)
+![managerPageMemo.png](/assets/images/TIL/project/managerPageMemo.png)
    
 관리자 페이지에서 어떤걸 구현할지 화면설계.  
   
