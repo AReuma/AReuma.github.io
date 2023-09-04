@@ -13,15 +13,15 @@ parent: TIL
 >⌛ 공부시간 : 9:30 ~
     
   
-![agile_0903.png](/assets/images/TIL/project/agile_0903.png)    
+![agile_0903.png](/assets/images/TIL/project/0903/agile_0903.png)    
     
 
 ## 1. 메인 페이지 [MP] 
   
     
-![categoryMouseover.png](/assets/images/TIL/project/categoryMouseover.png)    
+![categoryMouseover.png](/assets/images/TIL/project/0903/categoryMouseover.png)    
     
-![nameMouseover.png](/assets/images/TIL/project/nameMouseover.png)    
+![nameMouseover.png](/assets/images/TIL/project/0903/nameMouseover.png)    
     
 ```vue
 <div class="after_login_button" @mouseover="mouseover" @mouseleave="hideList">
@@ -113,9 +113,9 @@ methods: {
 
 ## 2. 입점 페이지 [EP]
   
-![enteringStore.png](/assets/images/TIL/project/enteringStore.png)
+![enteringStore.png](/assets/images/TIL/project/0903/enteringStore.png)
      
-![enteringStoreForms.png](/assets/images/TIL/project/enteringStoreForms.png)    
+![enteringStoreForms.png](/assets/images/TIL/project/0903/enteringStoreForms.png)    
     
 
 아래 화살표를 클릭하면 스크롤이 내려 고객의 정보를 작성해서 요청하는 폼이 나오도록 구현.  
@@ -148,7 +148,7 @@ methods: {
 
 ## 2. 관리자 페이지 [MAP],[SELLMS]
     
-![managerPageMemo.png](/assets/images/TIL/project/managerPageMemo.png)
+![managerPageMemo.png](/assets/images/TIL/project/0903/managerPageMemo.png)
    
 관리자 페이지에서 어떤걸 구현할지 화면설계.  
   
