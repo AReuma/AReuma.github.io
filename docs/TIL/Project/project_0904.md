@@ -4,173 +4,108 @@ title: 23.09.04 TIL
 parent: TIL
 ---
 
-# 23.09.03 TIL
+# 23.09.04 TIL
 
 
 >🗓 날짜 : 2023.09.04  
 >📚 할 일 : 개인 프로젝트 진행, 블로그 작성하기, 강의듣기  
 >📝 오늘의 목표:   [SELLMS], [SEELP] 30% 이상 진행, [MAF] additional Work로 넘기기  
 >⌛ 공부시간 : 9:30 ~
-    
-  
-![agile_0903.png](/assets/images/TIL/project/0903/agile_0903.png)    
-    
 
-## 1. 메인 페이지 [MP] 
-  
-    
-![categoryMouseover.png](/assets/images/TIL/project/0903/categoryMouseover.png)    
-    
-![nameMouseover.png](/assets/images/TIL/project/0903/nameMouseover.png)    
-    
-```vue
-<div class="after_login_button" @mouseover="mouseover" @mouseleave="hideList">
-    <div>{{ nickName }} 님</div>
-    
-    <div v-if="mouseoverCheck" style="position: absolute; z-index: 1; height: 170px; right: 320px; width: 150px; margin-top: 2px; padding: 10px; background-color: white; border: 0.5px solid rgba(67,79,88,0.25); border-radius: 4px">
-      <div v-for="(item, i) in mouseoverList" :key="i" style="padding: 5px;" @mouseover="changeTextColor(i)" @mouseleave="resetTextColor(i)">
-        <router-link class="custom-link" :to="{name: item.routerName}" :style="{color: item.textColor}"> {{item.name}} </router-link>
-      </div>
-      
-      <hr style="margin: 8px 0; border: 0.5px solid rgba(67,79,88,0.2);"/>
-      
-      <div style="padding: 2px" @click="logout" @mouseover="changeTextColorLogout" @mouseleave="resetTextColorLogout" :style="{color: changeTextColorLogoutColor}">
-        로그아웃
-      </div>
-    </div>
-</div>
+
+
+![agile_0904.png](/assets/images/TIL/project/0904/agile_0904.png)
+
+## 1. 관리자 페이지 [MAF]
+
+
+
+![managerFront.png](/assets/images/TIL/project/0904/managerFront.png)    
+![MAFCategory.png](/assets/images/TIL/project/0904/MAFCategory.png)   
+![MAFWaitingUser.png](/assets/images/TIL/project/0904/MAFWaitingUser.png)
+
+
+
+> 관리자 페이지에서 카테고리는 v-list-item으로 구현했다.  
+> 판매 페이지를 먼저 구현하고 싶었으나, 판매 상품을 작성할 수 있는 사용자를 생성하기 위해서 관리자 페이지를 구현했다.   
+> 여부를 선택 후 일정 시간이 지나면 waitingList DB에서 삭제가 되도록 구현중이다.  
+> 관리자 계정은 이미 만들어 둔 상태고 관리자 가입을 어떻게 진행해야 할지 고민해야 한다.
+
+
+
+## 2. 회원 관리 시스템 [MMS]
+
+
+오늘 진행을 하면서 연관관계를 맺어야 할지 고민했다.  
+![User_WaitingListDB.png](/assets/images/TIL/project/0904/User_WaitingListDB.png)
+
+
+먼저 그려둔 ERD를 보면 User와 WaitingList를 1:1 연관관계를 맺었다.
+
+아마 기획 시점에서부터 잘못된 것 같다.
+무슨 생각으로 기획을 한 건지 모르겠다.
+
+### 1. 누구나 쉽게 판매할 수 있다.
+누구나 쉽게 판매할 수 있다고 생각했으면 WaitingList라는 DB를 설계할 필요 없이 Seller db에 insert를 하면 된다.
+때문에 허가를 받는 걸 기획했던 것 같다.
+
+### 2. 허가받고 새로운 계정을 만들 동안 사용자 정보를 저장해 두는 DB로 설계한 것이다.
+허가받으면 WaitingList에 insert가 되고 따로 판매자로 회원가입을 할 때 User와 연관관계를 맺으려고 만들어 둔 db였다.
+
+### 3. 허가 요청을 기다리는 DB로 설계한 것이다.
+사용자가 허가 요청을 하면 WaitingList에 저장이 되고 관리자가 허용하면 Seller에 insert하고 User와 연관관계를 맺는다.
+
+
+
+다음 DB 설계할 때는 좀.. 설명도 추가해서 작성해야겠다.
+<hr/>
+
+어쨌든 2번과 3번 둘 다 허가를 받고 난 후 Seller와 연관관계를 맺을 때를 위해서 User와 WaitingList를 1:1 연관관계를 맺은 것 같은데,
+지금 생각해 보니 연관관계가 딱히 필요 없을 것 같다.
+
+WaitingList에 사용자의 아이디가 있으니깐 허가받은 후 email로 찾아서 Seller와 연관관계를 맺으면 되겠다. (아이디는 중복 불가, 유니크 제약조건)
+
+
+WaitingList에 있는 사용자는 허가받고 일정 시간이 지나면 사라지도록 구현할 예정이었다.
+
+<hr style="border: dashed 1px black"/>
+
+### Optional
+한 명의 회원이 여러 개의 상점을 가질 수 없다고 기획을 잡았다.
+
+그래서 WaitingList 안에 아이디가 있는지 중복 체크를 했다.
+중복을 체크하기 위해서 Optional을 사용했는데 보통은 null일 때 예외 처리를 했다.
+
+```java
+userRepository.findByEmail(email)
+        .orElseThrow(() -> new AppException(ErrorCode.USER_NOT_FOUND, "아이디가 없음"));
 ```
+
+null이 아닐때 예외처리는 if문을 가지고 했다.
+```java
+Optional<User> findUser = userRepository.findByEmail(emil);
+
+if(findUser.isPresent()){
     
-    
-```vue
-data(){
-  return {
-    mouseoverList: [
-        { name: '주문배송', routerName: 'MyOrderDeliveryPage', textColor: 'black'},
-        { name: '관심리스트', routerName: 'FavoriteProductPage', textColor: 'black'},
-        { name: '쿠폰함', routerName: 'MyCouponListPage', textColor: 'black'},
-        { name: '회원 정보관리', routerName: 'PersonalInfoPage', textColor: 'black'},
-    ],
-  }
-},
-methods: {
-    mouseover(){
-        this.mouseoverCheck = true;
-    },
-    hideList(){
-        this.mouseoverCheck = false
-    },
-    changeTextColor(index) {
-        this.mouseoverList[index].textColor = this.hoverColor;
-    },
-    resetTextColor(index) {
-        this.mouseoverList[index].textColor = 'black';
-    },
 }
 ```
-      
-> mouseover 구현    
-> div 배치 설정 구현  
-    
-    
-## 문제가 발생했던 부분 🔍  
-    
-이름 위에 마우스를 올리면 카테고리 박스가 나오도록 구현을 하고 싶어서 mouseover를 사용해서 div 박스가 나오도록 구현을 했으나  
-내 정보와 장바구니 버튼이 있는 div가 앞으로 나오는 상황이 발생했다.  
-    
-검색을 해보니 z-index를 이용해서 배치를 할 수 있다고해서 이용했다.  
-    
-### z-index   
-    
-* position 속성이 static인 경우 z-index 속성 값을 변경해도 바뀌지않는다. 
-  * position 속성을 relative, absolute, fixed, sticky로 변경해야한다. 
-  
-* z-index의 속성값의 숫자가 높을수록 앞으로 온다. (음수도 사용가능)
-    
-    
-## 문제가 발생했던 부분 🔍
-  
-    
-### 변경 전 
-```vue
- <div v-for="(item, i) in mouseoverList" :key="i" style="padding: 5px;" @mouseover="changeTextColor()" @mouseleave="resetTextColor()">
-   <router-link class="custom-link" :to="{name: item.routerName}" :style="{color: textColor}"> {{item.name}} </router-link>
-</div>
-```
-마우스를 올리면 뜰 이름들을 리스트로 만든 후 v-for을 이용해서 출력하도록 구현했다.  
-그 후 마우스를 올리면 글씨색이 변경되도록 구현을 원해서 리스트안에 색상을 넣지 않고 메서드에서 바로 this.textColor = 'this.hoverColor'; 변경을 시도했으나 이렇게 구현을하면 
-마우스를 올릴때 모든 글씨의 색상이 변경이 되는 문제가 발생했다.  
-  
-쉽게 생각을해보면 v-for로 반복되는 router-link에서 한번에 똑같은 색상으로 변경되는건 당연한 일이었다.  
-그래서 리스트안에 원래 글씨 생상을 넣어두고 마우스 올리는 이벤트가 발생하면 그때 인덱스를 넘겨서 해당의 리스트의 색상을 변경하도록 구현했다.  
-  
-### 변경 후
-```vue
-<div v-for="(item, i) in mouseoverList" :key="i" style="padding: 5px;" @mouseover="changeTextColor(i)" @mouseleave="resetTextColor(i)">
-   <router-link class="custom-link" :to="{name: item.routerName}" :style="{color: item.textColor}"> {{item.name}} </router-link>
-</div>
-```
-
-## 2. 입점 페이지 [EP]
-  
-![enteringStore.png](/assets/images/TIL/project/0903/enteringStore.png)
-     
-![enteringStoreForms.png](/assets/images/TIL/project/0903/enteringStoreForms.png)    
-    
-
-아래 화살표를 클릭하면 스크롤이 내려 고객의 정보를 작성해서 요청하는 폼이 나오도록 구현.  
-    
-```vue 
-<div style="position: absolute; z-index: 4; left: 48%; top: 760px;" @click="scrollClick()">
-    <v-icon x-large color="white">mdi-chevron-down</v-icon>
-</div>
-```
-
-```vue
-methods: {
-    scrollClick() {
-      window.scrollTo(0, 830);
-    }
-}
-```
-    
-    
-### window.scrollBy(x, y)
-    
-* 상대적인 위치 지정 
-* 현재 위치를 기준으로 파라미터 값만큼 이동
-  
-### windw.scrollTo(x, y)  
-    
-* 절대적인 위치 지정
-* 창의 시작을 기준으로 파라미터 값만큼 이동
 
 
-## 2. 관리자 페이지 [MAP],[SELLMS]
-    
-![managerPageMemo.png](/assets/images/TIL/project/0903/managerPageMemo.png)
-   
-관리자 페이지에서 어떤걸 구현할지 화면설계.  
-  
-관리자가 입점을 허용하게 되면 사용자의 계정을 어떻게해야할지에 대한 고민이 필요하다. 
-새로운 계정을 만들도록 해야할지, 아니면 같은 계정을 사용하도록 해야할지 선택을 해야겠다.  
-    
-새로운 계정을 만든다면 DB의 연관관계가 조금 간단해질것 같다.  
-일반 계정과 판매자 계정이 연결이 되어야하는 이유가 있을까..?
-  
-새로운 계정을 만들지 않으면 사용자가 판매자인지에 대한 판단을 하기위한 컬럼을 추가해야하고, User 와 연관관계를 맺어야한다.  
-새로운 계정을 만들면 그 계정은 어떻게 관리를 해야할까 User DB에 넣어야하는걸까? 추가해야할 내용이 많기 때문에 따로 만들어서 연관관계를 맺어야한다.
-그럼 새로운 계저을 만들지 않는거랑 똑같다.  
-   
-  
-그럼 완전히 DB를 분리하게 된다면,, 
-왜 분리해야하지?  
-이 부분은 조금 더 고민을 해봐야겠다.  
-   
+한 줄로 멋지게 코드를 작성할 방법이 있지 않을까 하고 검색했더니 Optional 속성을 통해서 작성할 수 있다고 했다.
 
-## ✅ 마무리  
-ERD를 설계할때 고민을 해보고 설계를 했는데, 프로젝트를 진행하면서 설계가 제대로 안된 부분이 생겼다.  
-개인 프로젝트라서 상의해서 결정을 하지않고 혼자 해야하니... 조금 더 어려운것 같다.  
-  
-어떤 이유로 선택했는지 정리는 해둬야겠다.  
-  
+```java
+userRepository.findByEmail(emil)
+  .isPresent(e -> new AppException(ErrorCode.USER_DUPLICATED, "아이디가 이미 존재함"));
+```  
+
+Optional 속성은 다음에 정리해봐야겠다.
+
+
+## ✅ 마무리
+개인 프로젝트다 보니 기획이 변경되어도 크게 문제 될 건 없다고 생각했다.
+다른 사람이랑 코드를 공유하는 게 아니다 보니 그냥 고치면 되겠다고 생각했지만, 구현 도중 다시 설계해야 하고 구현했던 부분을 지워야 하는 문제들이 발생했다.
+기획하고 설계할 때 생각보다 더 자세히 작성해야겠다는 생각이 들었다.
+
+이번 프로젝트는 어영부영 굴러가는 것 같다... 💧
+
+
