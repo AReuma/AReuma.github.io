@@ -65,7 +65,7 @@ parent: Docker
 ### 도커란?  
 성능 저하 없이 다른 프로세스와 격리되어 사용할 수 있도록 도와주는 도구.  
 
-<mark style="background: #2c84fa; font-size: 20px"> 컨테이너 기반의 오픈소스 가상화 플랫폼 </mark>  
+<mark style="background: #62a2fa; font-size: 20px"> 컨테이너 기반의 오픈소스 가상화 플랫폼 </mark>  
 
   
 ### 도커의 특징 
