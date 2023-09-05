@@ -19,12 +19,16 @@ parent: Docker
   
 ## run  
   
+> 컨테이너 실행
+  
+## run 옵션  
+  
 ### -d
 &nbsp;
 
-![runOption-d-1.png](assets/images/Docker/DockerRunOptions/runOption-d-1.png)  
+![runOption-d-1.png](/assets/images/Docker/DockerRunOptions/runOption-d-1.png)  
 &nbsp;
-![runOption-d-2.png](assets/images/Docker/DockerRunOptions/runOption-d-2.png)  
+![runOption-d-2.png](/assets/images/Docker/DockerRunOptions/runOption-d-2.png)  
 &nbsp;
 
 >  detached mode(백그라운드 모드 )  
@@ -37,7 +41,7 @@ parent: Docker
 
 &nbsp;
 
-![runOption-p.png](assets/images/Docker/DockerRunOptions/runOption-p.png)  
+![runOption-p.png](/assets/images/Docker/DockerRunOptions/runOption-p.png)  
 &nbsp;
 &nbsp;
 
@@ -62,7 +66,7 @@ parent: Docker
 ```shell
 docker run -d -p 3306:3360 -e MYSQL_ALLOW_EMPTY_PASSWORD=true mariadb:10.9
 ```  
-&nbsp;
+
 
 > 컨테이너 내에서 사용할 환경변수 설정
 > 위 처럼 설정하면 mysql에 접속할때 패스워드 없이 root를 만들 수 있다.    
@@ -73,7 +77,7 @@ docker run -d -p 3306:3360 -e MYSQL_ALLOW_EMPTY_PASSWORD=true mariadb:10.9
 ### --name  
 &nbsp;
 
-![runOption-name.png](assets/images/Docker/DockerRunOptions/runOption-name.png)  
+![runOption-name.png](/assets/images/Docker/DockerRunOptions/runOption-name.png)  
 &nbsp;
 &nbsp;
 
@@ -85,9 +89,9 @@ docker run -d -p 3306:3360 -e MYSQL_ALLOW_EMPTY_PASSWORD=true mariadb:10.9
 ### --rm  
 &nbsp;
 
-![runOption-rm-2.png](assets/images/Docker/DockerRunOptions/runOption-rm-2.png)  
+![runOption-rm-2.png](/assets/images/Docker/DockerRunOptions/runOption-rm-2.png)  
 &nbsp;
-![runOption-rm-1.png](assets/images/Docker/DockerRunOptions/runOption-rm-1.png)  
+![runOption-rm-1.png](/assets/images/Docker/DockerRunOptions/runOption-rm-1.png)  
 &nbsp;
 &nbsp;
 
@@ -99,7 +103,7 @@ docker run -d -p 3306:3360 -e MYSQL_ALLOW_EMPTY_PASSWORD=true mariadb:10.9
 ### -it  
 &nbsp;
 
-![runOption-it.png](assets/images/Docker/DockerRunOptions/runOption-it.png)  
+![runOption-it.png](/assets/images/Docker/DockerRunOptions/runOption-it.png)  
 &nbsp;
 &nbsp;
   
