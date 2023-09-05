@@ -89,3 +89,10 @@ parent: Docker
 * 자원 관리  
   ->  컨테이너는 삭제하면 데이터가 초기된다  
   ->  별도의 저장소가 필요  
+    
+    
+<hr>  
+[참고 블로그]  
+
+[https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html](https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html)
+[https://seosh817.tistory.com/345](https://seosh817.tistory.com/345)
