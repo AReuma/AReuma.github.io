@@ -1,6 +1,6 @@
 ---
 layout: default
-title: hasRole/ hasAuthority 차이점 
+title: hasRole/ hasAuthority 차이점으로 인한 에러 
 parent: Issue
 ---
 
@@ -14,11 +14,11 @@ ADMIN 권한을 가진 회원이 페이지를 요청해도 권한이 없다고 �
 
 
 ## <span style="background-color:pink; color: white"> Solution </span> 
-![before.png](/assets/images/Issue/Issue4/after.png)
+![before.png](/assets/images/Issue/Issue4/after.png)  
 hasRole() 대신해서 hasAuthority()을 사용하면 된다.  
   
 &nbsp;
-  
+
 ![hasRole.png](/assets/images/Issue/Issue4/hasRole.png)  
 &nbsp;
 ![hasRole_1.png](/assets/images/Issue/Issue4/hasRole_1.png)  
