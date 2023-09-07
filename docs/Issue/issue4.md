@@ -14,7 +14,8 @@ ADMIN 권한을 가진 회원이 페이지를 요청해도 권한이 없다고 �
 
 
 ## <span style="background-color:pink; color: white"> Solution </span> 
-![before.png](/assets/images/Issue/Issue4/after.png)  
+![before.png](/assets/images/Issue/Issue4/after.png)   
+
 hasRole() 대신해서 hasAuthority()을 사용하면 된다.  
   
 &nbsp;
