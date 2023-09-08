@@ -1,7 +1,7 @@
 ---
 layout: default
 title: @Scheduled를 이용해 일정 시간마다 실행하기
-parent: Spring,Springboot
+parent: Spring/Springboot
 grand_parent: Spring
 ---
 

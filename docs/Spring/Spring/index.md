@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Spring과 Springboot
+title: Spring/Springboot
 parent: Spring
 has_children: true
 ---
