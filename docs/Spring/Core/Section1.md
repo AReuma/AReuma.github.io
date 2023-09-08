@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 1. 객체 지향 설계와 스프링_1
-parent: Spring
+parent: 스프링 핵심 원리
+grand_parent: Spring
 ---
 
 # 객체 지향 설계와 스프링_1
