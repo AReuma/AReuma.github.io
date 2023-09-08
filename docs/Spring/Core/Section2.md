@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 3. DIP와 OCP를 준수하는 법
-parent: Spring
+parent: 스프링 핵심 원리
+grand_parent: Spring
 ---
 
 # DIP와 OCP를 준수하는 법

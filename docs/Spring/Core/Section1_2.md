@@ -1,7 +1,8 @@
 ---
 layout: default
 title: 2. 좋은 객체 지향 설계의 5가지 원칙(SOLID)
-parent: Spring
+parent: 스프링 핵심 원리
+grand_parent: Spring
 ---
 
 # 좋은 객체 지향 설계의 5가지 원칙(SOLID)
