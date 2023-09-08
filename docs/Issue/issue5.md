@@ -1,6 +1,6 @@
 ---
 layout: default
-title: @Scheduled 사용 시 @Transactional 메소드 사용으로 인한 에러 
+title: Scheduled 사용 시 @Transactional 메소드 사용으로 인한 에러 
 parent: Issue
 ---
 
