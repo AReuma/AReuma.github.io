@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Spring
-parent: Spring/Springboot
+title: Spring/Springboot
+parent: Spring
 has_children: true
 ---
 
