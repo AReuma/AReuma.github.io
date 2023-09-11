@@ -80,9 +80,11 @@ Take the URL/Base64 from `data` returned from server
 서버에서 반환된 URL/Base64를 가져온다는 문장을 보고 직접 클라우드에 올리고 content 안으로 넣으면 되겠다는 생각이 들었다.  
   
   
-Spring boot와 aws s3를 연동시키고, 이미지를 업로드 누르면 aws s3에 저장이 되도록 구현을 했다.  
+> Spring boot와 aws s3를 연동시키고, 이미지를 업로드 누르면 aws s3에 저장이 되도록 구현을 했다.  
   
 그럼 여기서 문제점은 판매자가 선택한 사진은 이미 클라우드에 올라가 있는 상태고 작성을 하다가 사진이 필요가 없어서 지우게 된다면, 필요없는 데이터만 쌓이게 되는것이다.  
+  
+
 이 해결 방법은 선택한 이미지의 이름을 배열로 갖고 있다가 판매자가 글을 작성하고 저장을 누를때 이미지의 이름들을 백으로 넘겨서 있는지 확인하고 없을 경우 지우도록 구현을 할 예정이다.  
   
 ![uploadImg1.png](/assets/images/TIL/project/0911/uploadImg1.png)  
@@ -93,6 +95,9 @@ Spring boot와 aws s3를 연동시키고, 이미지를 업로드 누르면 aws s
 ![uploadImg3.png](/assets/images/TIL/project/0911/uploadImg3.png)
   
 
-## ✅ 마무리
+## ✅ 마무리  
+tiptab 구현 코드와 springboot, aws s3 연동 코드는 Bossi 프로젝트 카테고리에 정리할 예정.  
+
 원래 목표는 tiptap 빠르게 마무리하고 redis와 연동해서 장바구니등등 구현할 예정이었는데 너무 많은 시간을 써서 오늘 목표까지는 구현을 못했다.  
-하지만 tiptap 포기안하고 사진 넣어서 조금 뿌듯한것 같기도~  🤪
+  
+하지만 tiptap 포기안하고 사진 넣어서 조금 뿌듯한것 같기도~  🤪  
