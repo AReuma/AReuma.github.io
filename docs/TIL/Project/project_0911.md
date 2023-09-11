@@ -37,7 +37,58 @@ tiptab 홈페이지 문서를 따라서 작성하니 글을 작성하는건 구�
 [Adding drag and drop image uploads to Tiptap](https://www.codemzy.com/blog/tiptap-drag-drop-image)  
   
   
-    
+## 1) 처음 시도한 코드 구현  
+tiptab 라이브러리에는 이미지 url을 알면 올릴 수 있는데 file로 열면 가져올 수 있지 않을까? 하는 생각이 들어 구현을 했다.   
+
+```html
+ <div>
+    <input type="file" @change="handleFileUpload">
+    <button @click="uploadFile">파일 업로드</button>
+</div>
+```
+
+```vue
+<script>
+export default {
+  data() {
+    return {
+      selectedFile: null,
+      previewURL: null
+    };
+  },
+  methods: {
+    handleFileUpload(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          this.previewURL = e.target.result;
+        };
+        reader.readAsDataURL(file);
+        this.selectedFile = file;
+      }
+    },
+    uploadFile() {
+      let formData = new FormData();
+      formData.append('file', this.selectedFile);
+
+    },
+  },
+};
+</script>
+```
+`previewURL`은 DataURL 형식으로 읽어오니깐 똑같은게 아닌가 하는 생각에 시도했다.  
+
+### 1️⃣ DataURL
+    * 형식: data:image/png;base64,iVBORw0KGg...  
+    * 이미지 파일 전체를 문자열로 표현
+
+### 2️⃣ 이미지 URL  
+    * 형식: 'https://example.com/images/example.jpg'
+    * 이미지 파일이 위치한 경로  
+  
+<hr/>   
+  
 
 이제 포기할까 하는 시점에 큰 힌트를 준 코드를 발견했다.  
 
