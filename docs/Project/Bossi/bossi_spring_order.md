@@ -12,8 +12,8 @@ grand_parent: Project
   
 &nbsp;
   
-# SpringSecurity 다중 로그인 구현
-
+# SpringSecurity 다중 로그인 구현  
+  &nbsp;
 
 "User"과 "Seller"을 연관 관계를 맺지 않고 각각 따로 가입할 수 있도록 설계했습니다.  
 또한, 판매자로 가입한 경우, 관리자가 정보를 확인한 후 입점 승인 또는 보류를 메일로 통지하고, 승인된 사용자는 메일을 통해 인증 후 가입할 수 있도록 구현했습니다.
