@@ -21,7 +21,10 @@ grand_parent: Project
 설계에 맞춰 개발 중에, 일반 회원은 UserDetails와 UserDetailService를 이용하여 로그인하게 되는데, 판매 회원은 어떻게 인증을 해야할지 막막했습니다.  
 여러개의 블로그를 찾아보았으나 WebSecurityConfigurerAdapter을 이용해 구현을해막히는 부분이 꽤 있었지만 해결을 해 정리해서 블로그 작성했습니다.   
   
-  
+![loginPage.png](/assets/images/Project/Bossi/bossi_spring_order/loginPage.png) 
+&nbsp;
+&nbsp;
+![sellerLogin.png](/assets/images/Project/Bossi/bossi_spring_order/sellerLogin.png)
     
 
 # 1. SellerUserDetails 구현  
