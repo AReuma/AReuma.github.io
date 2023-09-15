@@ -19,13 +19,14 @@ grand_parent: Project
 또한, 판매자로 가입한 경우, 관리자가 정보를 확인한 후 입점 승인 또는 보류를 메일로 통지하고, 승인된 사용자는 메일을 통해 인증 후 가입할 수 있도록 구현했습니다.
 
 설계에 맞춰 개발 중에, 일반 회원은 UserDetails와 UserDetailService를 이용하여 로그인하게 되는데, 판매 회원은 어떻게 인증을 해야할지 막막했습니다.  
-여러개의 블로그를 찾아보았으나 WebSecurityConfigurerAdapter을 이용해 구현을해막히는 부분이 꽤 있었지만 해결을 해 정리해서 블로그 작성했습니다.   
+여러개의 블로그를 찾아보았으나 WebSecurityConfigurerAdapter을 이용해 구현을해막히는 부분이 꽤 있었지만 해결을 해 정리해서 블로그 작성했습니다.  
   
+&nbsp;
 ![loginPage.png](/assets/images/Project/Bossi/bossi_spring_order/loginPage.png) 
 &nbsp;
 &nbsp;
 ![sellerLogin.png](/assets/images/Project/Bossi/bossi_spring_order/sellerLogin.png)
-    
+&nbsp; 
 
 # 1. SellerUserDetails 구현  
     
