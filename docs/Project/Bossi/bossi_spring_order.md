@@ -7,7 +7,7 @@ grand_parent: Project
 
 # 23.09.15 이번주 진행상황  
 
-![img.png](/assets/images/Project/Bossi/Fbossi_spring_order/img.png)  
+![img.png](/assets/images/Project/Bossi/bossi_spring_order/img.png)  
 9.17일까지 SELLMS 마무리 예정  
   
 &nbsp;
