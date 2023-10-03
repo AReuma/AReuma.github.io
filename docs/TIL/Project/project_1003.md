@@ -45,5 +45,5 @@ parent: TIL
   
 그래서 그에 맞는 엔티티 구현을 하고 있다.  
 
-![img_2.png](..%2F..%2F..%2Fassets%2Fimages%2FTIL%2Fproject%2F1003%2Fimg_2.png)  
+![img_2.png](/assets/images/TIL/project/1003/img_2.png)  
   
